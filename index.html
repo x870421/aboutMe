@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Bootstrap 4 網頁練習範例 - HTML5,CSS3,Bootstrap,jQuery網頁設計基礎班
+    </title>
+    <link rel="icon shortcut" href="./img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animax.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav id="navtop" class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">My Website</a>
+
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutSection">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#introSection">Intro</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#SkillSection">Skill</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section id="header" class="jumbotron text-white">
+        <div class="container">
+          <h1 class="hi1">Hi,I'm Susu！</h1>
+          <p class="hi2">Welcome to my Website.</p>
+        </div>
+      </section>
+    </header>
+
+    <section id="aboutSection" class="about py-5 text-white">
+      <div class="container">
+        <h1 class="text-center">About</h1>
+        <div class="row py-5">
+          <div class="col-md-6 img-flex py-3">
+            <img class="me" src="./img/me 1.png" alt="me" />
+          </div>
+          <div class="col-md-6 text-secondary">
+            <p class="p-white">
+              我畢業於東吳大學財務工程與精算學系，畢業後從事會計的工作，對程式語言很有興趣。
+              <br />
+              <br />
+              在大學期間，有使用R、Python與Spss的經驗，開啟了我對於撰寫程式的興趣。
+              <br />
+              <br />
+              因為我從小就對電腦有濃厚的興趣，加上想要學會更多不同的語言，因此利用業餘時間透過許多不同的線上學習資源充實自己，希望未來可以找到相關的工作。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="introSection" class="py-5">
+      <div class="container">
+        <h1 class="section-title text-center md-5 py-3" style="color: #30415d">
+          Intro
+        </h1>
+        <!-- 修正排版為三項排一排 -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="intro-box">
+              <div class="icon text-primary py-3">
+                <a href="https://github.com/x870421" target="_blank">
+                  <i class="fab fa-brands fa-github fa-5x"></i>
+                </a>
+              </div>
+              <h3 class="text-secondary">Github</h3>
+              <div class="intro-line bg-primary"></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit possimus aliquam dolor sit hic quae!
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="intro-box">
+              <div class="icon text-primary py-3">
+                <i class="fas fa-briefcase fa-5x" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-secondary">Stable</h3>
+              <div class="intro-line bg-primary"></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit possimus aliquam dolor sit hic quae!
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="intro-box">
+              <div class="icon text-primary py-3">
+                <i class="fas fa-gem fa-5x" aria-hidden="true"></i>
+              </div>
+              <h3 class="text-secondary">Persistence</h3>
+              <div class="intro-line bg-primary"></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit possimus aliquam dolor sit hic quae!
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- TODO: 設定此區塊距離上方5倍margin -->
+        <!-- TODO: 修正排版在md時六個排一排 sm三個排一排 sm以下兩個排一排-->
+        <div class="row mt-5">
+          <div class="text-center col-md-2 col-sm-4 col-6">
+            <i class="fas fa-tree fa-2x text-secondary" aria-hidden="true"></i>
+            <h5 class="mt-3 text-secondary">Cozy Office</h5>
+          </div>
+          <div class="text-center col-md-2 col-sm-4 col-6">
+            <i
+              class="fas fa-coffee fa-2x text-secondary"
+              aria-hidden="true"
+            ></i>
+            <h5 class="mt-3 text-secondary">Free coffee bar</h5>
+          </div>
+          <div class="text-center col-md-2 col-sm-4 col-6">
+            <i
+              class="fas fa-id-card fa-2x text-secondary"
+              aria-hidden="true"
+            ></i>
+            <h5 class="mt-3 text-secondary">Profesional Team</h5>
+          </div>
+          <div class="text-center col-md-2 col-sm-4 col-6">
+            <i
+              class="fas fa-language fa-2x text-secondary"
+              aria-hidden="true"
+            ></i>
+            <h5 class="mt-3 text-secondary">Linguist</h5>
+          </div>
+          <div class="text-center col-md-2 col-sm-4 col-6">
+            <i
+              class="fas fa-rocket fa-2x text-secondary"
+              aria-hidden="true"
+            ></i>
+            <h5 class="mt-3 text-secondary">Hackers Spirit</h5>
+          </div>
+          <div class="text-center col-md-2 col-sm-4 col-6">
+            <i
+              class="fas fa-graduation-cap fa-2x text-secondary"
+              aria-hidden="true"
+            ></i>
+            <h5 class="mt-3 text-secondary">Self-Learning</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="SkillSection" class="py-5 text-white">
+      <h1 class="section-title mb-5 text-center">skill</h1>
+      <div class="container">
+        <div class="row">
+          <div class="left col-md-6 col-sm-12">
+            <h3 class="text-light text-center pt-3">前端</h3>
+            <ul>
+              <li><a>HTML</a></li>
+              <li><a>CSS/CASS</a></li>
+              <li><a>JavaScript</a></li>
+              <li><a>React</a></li>
+              <li><a>jQuery</a></li>
+              <li><a>Bootstrap</a></li>
+            </ul>
+            <br />
+            <h3 class="text-light text-center py-2">辦公室應用</h3>
+            <ul>
+              <li><a>Word</a></li>
+              <li><a>PowerPoint</a></li>
+              <li><a>Excel</a></li>
+              <li><a>Outlook</a></li>
+              <li><a>Python</a></li>
+              <li><a>spss</a></li>
+            </ul>
+          </div>
+
+          <div class="right col-md-6 col-sm-10 col-10">
+            <div class="row">
+              <div class="col-sm-10 col-md-10">
+                <h3 class="text-light pt-3">自學課程</h3>
+                <div class="my-4">
+                  <button
+                    data-toggle="collapse"
+                    data-target="#article1"
+                    class="btn btn-primary"
+                  >
+                    Udemy
+                  </button>
+                  <button
+                    data-toggle="collapse"
+                    data-target="#article2"
+                    class="btn btn-primary"
+                  >
+                    Hahow
+                  </button>
+                  <button
+                    data-toggle="collapse"
+                    data-target="#article3"
+                    class="btn btn-primary"
+                  >
+                    台大訓練班
+                  </button>
+
+                  <div>
+                    <article class="my-3 collapse show" id="article1">
+                      <h3>Udmey |</h3>
+                      <p style="line-height: 30px">
+                        離散數學與演算法 (Python, JavaScript)
+                        <br />
+                        2022網頁開發全攻略(HTML, CSS, JavaScript, React, SQL,
+                        Node, more) <br />
+                        Python資料分析-入門實戰
+                      </p>
+                    </article>
+                    <article class="my-3 collapse show" id="article2">
+                      <h3>Hahow|</h3>
+                      <p style="line-height: 30px">
+                        Python 入門特訓 - 基礎實作到證照攻略
+                      </p>
+                    </article>
+                    <article class="my-3 collapse show" id="article3">
+                      <h3 style="font-weight: 600">台大資訊系統訓練班|</h3>
+                      <p style="line-height: 30px">
+                        HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班
+                      </p>
+                      <h3 style="font-weight: 600">彭彭的課程|</h3>
+                      <p style="line-height: 30px">
+                        JavaScript ES6 與 React 前端開發：從入門到進階
+                      </p>
+                    </article>
+                  </div>
+                  <br />
+                  <section style="height: 35vh">
+                    <h3 class="text-light py-2">證照</h3>
+                    <nav class="nav nav-pills">
+                      <a
+                        data-toggle="tab"
+                        class="nav-link active"
+                        href="#article4"
+                        >程式語言</a
+                      >
+                      <a data-toggle="tab" class="nav-link" href="#article5"
+                        >財務相關</a
+                      >
+                    </nav>
+
+                    <div class="tab-content">
+                      <article id="article4" class="my-3 tab-pane active">
+                        <h3>程式語言</h3>
+                        <p style="line-height: 30px">TQC+ 程式語言 (Python)</p>
+                      </article>
+                      <article id="article5" class="my-3 tab-pane">
+                        <h3>財務相關</h3>
+                        <p style="line-height: 30px">
+                          金融市場常識與職業道德 <br />
+                          證券商業務員 <br />證券商高級業務員<br />
+                          美國精算證照SOA (p)
+                        </p>
+                      </article>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="pt-5 bg-secondary text-white">
+      <div class="footer-end bg-dark mt-5 py-2">
+        <p class="text-center">&copy; Copy right <span id="yearShow"></span></p>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <!-- side-box -->
+    <div class="side-box">
+      <div class="left-part">
+        <button class="">
+          <i class="fas fa-sort"></i>
+        </button>
+      </div>
+      <div class="right-part">
+        <img class="w-100" src="./img/4101X2108.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+          numquam ullam excepturi facilis aperiam. Maiores mollitia nihil vitae
+          ullam dolore?
+        </p>
+        <div class="mt-2">
+          <button id="removeSideBoxBtn" class="btn btn-sm btn-danger">
+            Close Box
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- side-box end -->
+    <button id="goBackBtn" class="bg-primary">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+  </body>
+  <!-- jquery.min.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <!-- 連結網頁主程式 -->
+  <script src="./js/main.js"></script>
+</html>

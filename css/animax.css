@@ -1,0 +1,91 @@
+body header section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header section div h1.hi1 {
+  font-family: "Courier New", Courier, monospace;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+  -webkit-animation: 2s typing steps(13, jump-none) forwards;
+          animation: 2s typing steps(13, jump-none) forwards;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+body header section div p.hi2 {
+  font-size: 1.75rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: 2s typing2 steps(22, jump-none) forwards;
+          animation: 2s typing2 steps(22, jump-none) forwards;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 13ch;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 13ch;
+  }
+}
+
+@-webkit-keyframes typing2 {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 22ch;
+  }
+}
+
+@keyframes typing2 {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 22ch;
+  }
+}
+/*# sourceMappingURL=animax.css.map */
