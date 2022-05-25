@@ -31,7 +31,7 @@ $(".navbar .nav-link").click(function () {
   // 執行滑動動畫
 });
 
-$(".bg-primary").click(function () {
+$("#goBackBtn").click(function () {
   $("html,body").animate({ scrollTop: 0 }, 500);
 });
 
