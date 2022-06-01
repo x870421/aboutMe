@@ -15,6 +15,7 @@ html {
 body {
   max-width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 button:focus {
@@ -44,17 +45,25 @@ h1 {
 .navbar-brand {
   color: white;
   font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .nav-link {
   color: rgba(255, 255, 255, 1);
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
 .nav-link :hover {
-  color: #ddd;
+  color: #f7c331;
   text-decoration: none;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: #f7c331;
 }
 
 /*=============================================
