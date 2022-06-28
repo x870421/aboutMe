@@ -287,10 +287,10 @@ footer ul {
   =                 FORM                   =
   =============================================*/
 
-label {
+.form label {
   cursor: pointer;
 }
-input {
+.form input {
   width: 100%;
   padding: 5px;
   margin: 5px 0 10px 0;
