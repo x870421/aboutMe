@@ -33,6 +33,14 @@ h1 {
           justify-content: center;
 }
 
+.mainColor {
+  color: #30415d;
+}
+
+.section-35vh {
+  height: 35vh;
+}
+
 /*=============================================
   =                  Navbar                     =
   =============================================*/
@@ -140,10 +148,6 @@ h1 {
 /*=============================================
   =                  Intro                      =
   =============================================*/
-#introSection {
-  min-height: 85vh;
-}
-
 .intro-box,
 .intro-line,
 .intro-box .icon {
@@ -321,6 +325,32 @@ footer ul {
 }
 
 /*=============================================
+  =                 FORM                   =
+  =============================================*/
+label {
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 10px 0;
+  position: relative;
+  border: 1px solid #242f41;
+  border-radius: 3px;
+}
+
+input:last-of-type {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  background-color: #30415d;
+  border: none;
+  color: #fff;
+  width: 70px;
+}
+
+/*=============================================
   =                  SIDE-BOX                   =
   =============================================*/
 .side-box {
@@ -382,6 +412,14 @@ footer ul {
 
 .right-part > p {
   margin-bottom: 0;
+}
+
+.lh-30 {
+  line-height: 30px;
+}
+
+.h3-title-600 {
+  font-weight: 600px;
 }
 
 @media screen and (max-width: 768px) {

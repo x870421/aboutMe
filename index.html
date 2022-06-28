@@ -14,14 +14,17 @@
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/animax.css" />
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="60">
+  <body data-spy="scroll" data-target=".navbar" data-offset="70">
     <header>
       <nav id="navtop" class="navbar navbar-expand-sm navbar-dark fixed-top">
         <a class="navbar-brand" href="#">My Website</a>
@@ -64,7 +67,7 @@
 
     <section id="aboutSection" class="about py-5 text-white">
       <div class="container">
-        <h1 class="text-center">About</h1>
+        <h2 class="text-center">About</h2>
         <div class="row py-5">
           <div class="col-md-6 img-flex py-3">
             <img class="me" src="./img/me 1.png" alt="me" />
@@ -86,9 +89,7 @@
 
     <section id="introSection" class="py-5">
       <div class="container">
-        <h1 class="section-title text-center md-5 py-3" style="color: #30415d">
-          Intro
-        </h1>
+        <h2 class="text-center md-5 mainColor mb-5">Intro</h2>
         <!-- 修正排版為三項排一排 -->
         <div class="row">
           <div class="col-md-4">
@@ -100,42 +101,43 @@
               </div>
               <h3 class="text-secondary">Github</h3>
               <div class="intro-line bg-primary"></div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit possimus aliquam dolor sit hic quae!
-              </p>
+              <div class="px-2 text-left">
+                點擊我的github，參考我的作品集。
+                <br />透過HTML,CSS和JavaScript開發前端網頁，使用Node.JS &
+                mongoDB 寫出後端邏輯。
+              </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="intro-box">
               <div class="icon text-primary py-3">
-                <i class="fas fa-briefcase fa-5x" aria-hidden="true"></i>
+                <i class="fa-solid fa-tablet-screen-button fa-5x"></i>
               </div>
-              <h3 class="text-secondary">Stable</h3>
+              <h3 class="text-secondary">網頁設計</h3>
               <div class="intro-line bg-primary"></div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit possimus aliquam dolor sit hic quae!
-              </p>
+              <div class="px-2 text-left">
+                熟悉RWD設計，使網站在不同裝置下瀏覽，能有更佳的視覺體驗。<br />
+                透過bootstrap以及scss進行開發與管理。
+              </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="intro-box">
               <div class="icon text-primary py-3">
-                <i class="fas fa-gem fa-5x" aria-hidden="true"></i>
+                <i class="fas fa-rocket fa-5x" aria-hidden="true"></i>
               </div>
-              <h3 class="text-secondary">Persistence</h3>
+              <h3 class="text-secondary">網頁互動</h3>
               <div class="intro-line bg-primary"></div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit possimus aliquam dolor sit hic quae!
-              </p>
+              <div class="px-2 text-left">
+                使用JavaScript與JQuery做出互動式網頁，提高瀏覽者使用體驗。<br />
+                AJAX串接API技術。
+              </div>
             </div>
           </div>
         </div>
         <!-- TODO: 設定此區塊距離上方5倍margin -->
         <!-- TODO: 修正排版在md時六個排一排 sm三個排一排 sm以下兩個排一排-->
-        <div class="row mt-5">
+        <!-- <div class="row mt-5">
           <div class="text-center col-md-2 col-sm-4 col-6">
             <i class="fas fa-tree fa-2x text-secondary" aria-hidden="true"></i>
             <h5 class="mt-3 text-secondary">Cozy Office</h5>
@@ -175,15 +177,15 @@
             ></i>
             <h5 class="mt-3 text-secondary">Self-Learning</h5>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
     <section id="SkillSection" class="py-5 text-white">
-      <h1 class="section-title mb-5 text-center">skill</h1>
+      <h2 class="section-title mb-5 text-center">skill</h2>
       <div class="container">
         <div class="row">
-          <div class="left col-md-6 col-sm-12">
+          <div class="col-md-6 col-sm-12">
             <h3 class="text-light text-center pt-3">前端</h3>
             <ul>
               <li><a>HTML</a></li>
@@ -205,7 +207,7 @@
             </ul>
           </div>
 
-          <div class="right col-md-6 col-sm-10 col-10">
+          <div class="col-md-6 col-sm-10 col-10">
             <div class="row">
               <div class="col-sm-10 col-md-10">
                 <h3 class="text-light pt-3">自學課程</h3>
@@ -235,7 +237,7 @@
                   <div>
                     <article class="my-3 collapse show" id="article1">
                       <h3>Udmey |</h3>
-                      <p style="line-height: 30px">
+                      <p class="lh-30">
                         離散數學與演算法 (Python, JavaScript)
                         <br />
                         2022網頁開發全攻略(HTML, CSS, JavaScript, React, SQL,
@@ -243,26 +245,24 @@
                         Python資料分析-入門實戰
                       </p>
                     </article>
-                    <article class="my-3 collapse show" id="article2">
-                      <h3>Hahow|</h3>
-                      <p style="line-height: 30px">
-                        Python 入門特訓 - 基礎實作到證照攻略
-                      </p>
+                    <article class="my-3 collapse show lh-30" id="article2">
+                      <h3>Hahow |</h3>
+                      <p>Python 入門特訓 - 基礎實作到證照攻略</p>
                     </article>
                     <article class="my-3 collapse show" id="article3">
-                      <h3 style="font-weight: 600">台大資訊系統訓練班|</h3>
-                      <p style="line-height: 30px">
+                      <h3 class="h3-title-600">台大資訊系統訓練班|</h3>
+                      <p class="lh-30">
                         HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班
                       </p>
-                      <h3 style="font-weight: 600">彭彭的課程|</h3>
-                      <p style="line-height: 30px">
+                      <h3 class="p-title-600">彭彭的課程 |</h3>
+                      <p class="lh-30">
                         JavaScript ES6 與 React 前端開發：從入門到進階
                       </p>
                     </article>
                   </div>
                   <br />
-                  <section style="height: 35vh">
-                    <h3 class="text-light py-2">證照</h3>
+                  <section class="section-35vh">
+                    <h3 class="text-light py-2">證照與證書</h3>
                     <nav class="nav nav-pills">
                       <a
                         data-toggle="tab"
@@ -276,13 +276,16 @@
                     </nav>
 
                     <div class="tab-content">
-                      <article id="article4" class="my-3 tab-pane active">
+                      <article id="article4" class="my-3 tab-pane active lh-30">
                         <h3>程式語言</h3>
-                        <p style="line-height: 30px">TQC+ 程式語言 (Python)</p>
+                        <p>
+                          TQC+ 程式語言 (Python) <br />
+                          台灣大學資訊班-網頁設計基礎班結業證書
+                        </p>
                       </article>
-                      <article id="article5" class="my-3 tab-pane">
+                      <article id="article5" class="my-3 tab-pane lh-30">
                         <h3>財務相關</h3>
-                        <p style="line-height: 30px">
+                        <p class="lh-30">
                           金融市場常識與職業道德 <br />
                           證券商業務員 <br />證券商高級業務員<br />
                           美國精算證照SOA (p)
@@ -295,6 +298,53 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section id="form" class="py-5 px-5">
+      <h2 class="text-center md-5 mainColor mb-5">
+        留下你的資料 <br />讓我來聯繫你!
+      </h2>
+      <div class="container">
+        <form
+          action="https://formspree.io/f/mknyayjb"
+          method="post"
+          class="row justify-content-around"
+        >
+          <!-- <label for="textarea">留言:</label> -->
+          <textarea
+            name="textarea"
+            id="textarea"
+            cols="40"
+            rows="12"
+            placeholder="想對我說的話"
+            class="col-md-6 col-sm-10 my-2"
+          ></textarea>
+          <div class="col-md-6 mainColor col-sm-10 my-2">
+            <label for="name">姓名</label>
+            <br />
+            <input id="name" type="text" placeholder="請輸入姓名" name="name" />
+            <br />
+            <label for="phone">電話</label>
+            <br />
+            <input
+              id="phone"
+              type="text"
+              placeholder="請輸入電話"
+              name="phone"
+            />
+            <br />
+            <label for="mail">信箱</label>
+            <br />
+            <input
+              id="mail"
+              type="email"
+              placeholder="請輸入信箱"
+              name="mail"
+            />
+            <br />
+            <input type="submit" value="送出" />
+          </div>
+        </form>
       </div>
     </section>
 
@@ -313,7 +363,7 @@
       </div>
       <div class="right-part">
         <img class="w-100" src="../img/1280.jpg" />
-        <p>歡迎來到我的網站<br />也任何建議歡迎隨時與我聯繫!</p>
+        <p>歡迎來到我的網站<br />有任何建議歡迎隨時與我聯繫!</p>
         <div class="mt-2">
           <button id="removeSideBoxBtn" class="btn btn-sm btn-danger">
             Close Box
@@ -323,7 +373,7 @@
     </div>
     <!-- side-box end -->
     <button id="goBackBtn" class="bg-primary">
-      <i class="fas fa-chevron-up "></i>
+      <i class="fas fa-chevron-up"></i>
     </button>
   </body>
   <!-- jquery.min.js -->

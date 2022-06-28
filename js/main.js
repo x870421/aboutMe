@@ -11,7 +11,7 @@ $("#removeSideBoxBtn").click(function () {
 });
 
 // 綁定 .navbar 裡面 .nav-link 的點擊事件
-$(".navbar .nav-link").click(function () {
+$(".navbar .nav-link").click(function (e) {
   // 取得滑動目標
   // 取得滑動目標的所在座標
 
