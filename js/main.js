@@ -19,7 +19,7 @@ $(".navbar .nav-link").click(function (e) {
 
   $("html, body").animate(
     {
-      scrollTop: $(target).stop().offset().top - 60,
+      scrollTop: $(target).stop().offset().top - 50,
     },
     800
   );

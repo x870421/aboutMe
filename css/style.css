@@ -47,7 +47,7 @@ h1 {
 .navbar {
   -webkit-box-shadow: 0 3px 18px rgba(0, 0, 0, 0.11);
           box-shadow: 0 3px 18px rgba(0, 0, 0, 0.11);
-  /* height: 60px; */
+  padding: 4px 1rem;
 }
 
 #navtop {
@@ -67,9 +67,16 @@ h1 {
   font-weight: 500;
 }
 
-.nav-link :hover {
+.nav-link :hover,
+.nav-link :active {
   color: #f7c331;
   text-decoration: none;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #f7c331;
 }
 
 .navbar-dark .navbar-nav .active > .nav-link,
@@ -125,24 +132,56 @@ h1 {
   font-size: 1.25rem;
 }
 
-.me {
+.myPic {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-height: 45vh;
-  max-width: 45vh;
+  max-height: 35vh;
+  max-width: 35vh;
   padding: auto;
-  margin: 0 auto;
 }
 
 .img-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 2rem;
+}
+
+.about-content {
+  padding: 2rem;
+  list-style-type: none;
+}
+
+.about-content-link {
+  color: #fff;
+}
+
+.about-content-link:hover {
+  text-decoration: none;
+  color: #f7c331;
+}
+
+.fs-12 {
+  font-size: 1.2rem;
+}
+
+.scaleTop {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.scaleTop:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #f7c331;
 }
 
 /*=============================================
@@ -304,9 +343,8 @@ footer ul {
   margin: 0;
 }
 
-.footer-end p {
+.footer-end {
   font-size: 8px;
-  margin: 0;
 }
 
 #goBackBtn {
@@ -414,6 +452,10 @@ footer ul {
   margin-bottom: 0;
 }
 
+.right-part-content {
+  list-style-type: none;
+}
+
 .lh-30 {
   line-height: 30px;
 }
@@ -425,6 +467,9 @@ footer ul {
 @media screen and (max-width: 768px) {
   #header {
     background-attachment: scroll;
+  }
+  .form {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
