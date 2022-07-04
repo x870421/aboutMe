@@ -49,3 +49,12 @@ window.addEventListener("scroll", () => {
     img.style.filter = "";
   }
 });
+
+function showBtnCondition() {
+  if ($(this).scrollTop() > 500) {
+    $("#goBackBtn").fadeIn();
+  } else {
+    $("#goBackBtn").fadeOut();
+  }
+}
+$(window).scroll(showBtnCondition);

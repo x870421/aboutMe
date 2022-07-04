@@ -7,6 +7,7 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 html {
@@ -23,7 +24,7 @@ button:focus {
   outline: none;
 }
 
-h1 {
+.titleShadow {
   text-shadow: 0em 0.1em 0.2em black;
 }
 
@@ -317,9 +318,8 @@ h1 {
   color: inherit;
 }
 
-#SkillSection ul li a:hover {
+#SkillSection ul li:hover a {
   color: #f7c331;
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -352,10 +352,16 @@ footer ul {
   height: 40px;
   border: none;
   position: fixed;
-  bottom: 15px;
+  bottom: 20px;
   right: 15px;
   z-index: 1000;
   border-radius: 50%;
+  background-color: #007bff;
+  display: none;
+}
+
+#goBackBtn:hover {
+  background-color: #0062cc;
 }
 
 #goBackBtn i {
@@ -461,7 +467,11 @@ footer ul {
 }
 
 .h3-title-600 {
-  font-weight: 600px;
+  font-weight: 600px !important;
+}
+
+h2 {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
