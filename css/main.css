@@ -1,4 +1,95 @@
 @charset "UTF-8";
+body header section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header section div h1.hi1 {
+  font-family: "Courier New", Courier, monospace;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+  -webkit-animation: 2s typing steps(13, jump-none) forwards;
+          animation: 2s typing steps(13, jump-none) forwards;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+body header section div p.hi2 {
+  font-size: 1.75rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: 2s typing2 steps(22, jump-none) forwards;
+          animation: 2s typing2 steps(22, jump-none) forwards;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 13ch;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 13ch;
+  }
+}
+
+@-webkit-keyframes typing2 {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 22ch;
+  }
+}
+
+@keyframes typing2 {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 22ch;
+  }
+}
+
 /*=============================================
 =                  General                    =
 =============================================*/
@@ -8,6 +99,7 @@
   padding: 0;
   margin: 0;
   font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 1px;
 }
 
 html {
@@ -28,18 +120,8 @@ button:focus {
   text-shadow: 0em 0.1em 0.2em black;
 }
 
-.row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .mainColor {
   color: #30415d;
-}
-
-.section-35vh {
-  height: 35vh;
 }
 
 /*=============================================
@@ -122,15 +204,11 @@ button:focus {
   background-color: #30415d;
 }
 
-.color-w,
-.p-white {
-  color: white;
-}
-
 .p-white {
   margin: 1rem;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 1.25rem;
+  color: white;
 }
 
 .myPic {
@@ -140,20 +218,6 @@ button:focus {
   max-height: 35vh;
   max-width: 35vh;
   padding: auto;
-}
-
-.img-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 2rem;
 }
 
 .about-content {
@@ -188,6 +252,10 @@ button:focus {
 /*=============================================
   =                  Intro                      =
   =============================================*/
+#introSection {
+  background-color: #eff;
+}
+
 .intro-box,
 .intro-line,
 .intro-box .icon {
@@ -232,6 +300,18 @@ button:focus {
           transform: scale(1);
 }
 
+.license-tilte {
+  color: #30415d;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.sheet {
+  list-style-type: none;
+  font-size: 1.25rem;
+  color: #30415d;
+}
+
 /*=============================================
   =                  Features                   =
   =============================================*/
@@ -247,7 +327,7 @@ button:focus {
 
 #SkillSection ul {
   list-style: none;
-  margin: 30px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,6 +411,130 @@ a.nav-link:hover {
   color: white;
 }
 
+.button-group {
+  margin-top: 30px;
+}
+
+/*=============================================
+  =                project                     =
+  =============================================*/
+.project {
+  background-color: #30415d;
+  padding-bottom: 5rem;
+}
+
+.project-row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.project-picture,
+.project-intro {
+  margin: 2rem 0;
+}
+
+.picture-img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-intro-title {
+  color: #fff;
+  font-weight: bold;
+}
+
+.project-intro-text {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5rem;
+}
+
+.project-link {
+  display: inline-block;
+  position: relative;
+  color: white;
+  padding: 8px 32px;
+  font-weight: 500;
+  margin-top: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.project-link::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  border-top: 2px solid #eee;
+  border-left: 2px solid #eee;
+  -webkit-transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
+}
+
+.project-link::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  bottom: 0;
+  border-radius: 2px;
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  -webkit-transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
+}
+
+.project-link:hover::before, .project-link:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.project-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.right-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  .left-link {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 /*=============================================
   =                  Start Now                  =
   =============================================*/
@@ -384,14 +588,23 @@ footer ul {
   border-radius: 3px;
 }
 
-.form input:last-of-type {
+.submit_btn input {
   cursor: pointer;
   position: absolute;
-  right: 0px;
+  right: 15px;
   background-color: #30415d;
   border: none;
   color: #fff;
   width: 70px;
+  margin: 5px 0 10px 0;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .submit_btn input {
+    position: relative;
+    right: 0;
+  }
 }
 
 /*=============================================
@@ -482,4 +695,4 @@ h2 {
     padding: 0;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

@@ -21,10 +21,23 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/animax.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
 
     <title>大家好我是蘇奕庭!</title>
+
+    <!-- jquery.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- bootstrap.min.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <!-- wow.min.js -->
+    <script src="./js/wow.min.js"></script>
+    <!-- 連結網頁主程式 -->
+    <script src="./js/main.js"></script>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="55">
@@ -75,8 +88,10 @@
       <div class="container">
         <h2 class="text-center titleShadow">About</h2>
         <div class="row py-5">
-          <div class="col-md-6 img-flex py-3">
+          <!-- 左邊圖片與文字部分 -->
+          <div class="col-md-6 row justify-content-center">
             <img class="myPic mx-auto" src="./img/me 1.png" alt="me" />
+
             <ul class="about-content align-item-center fs-12 mx-auto">
               <li class="my-1 scaleTop">
                 <i class="fa-solid fa-envelope"></i>：
@@ -101,6 +116,7 @@
               </li>
             </ul>
           </div>
+          <!-- 右邊介紹部分 -->
           <div class="col-md-6 text-secondary my-auto">
             <p class="p-white">
               我畢業於東吳大學財務工程與精算學系，畢業後從事會計的工作，對程式語言很有興趣。
@@ -117,11 +133,12 @@
     </section>
 
     <section id="introSection" class="py-5">
-      <div class="container">
+      <div class="container-xl">
         <h2 class="text-center md-5 mainColor mb-5 titleShadow">Intro</h2>
-
-        <div class="row">
-          <div class="col-md-4 col-10">
+        <!-- 中間區塊 -->
+        <div class="row justify-content-center">
+          <!-- 第一張卡片 -->
+          <div class="col-md-4 col-10 my-2">
             <div class="intro-box">
               <div class="icon text-primary py-3">
                 <a href="https://github.com/x870421" target="_blank">
@@ -136,7 +153,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-10">
+          <!-- 第一張卡片結束 -->
+          <!-- 第二張卡片 -->
+          <div class="col-md-4 col-10 my-2">
             <div class="intro-box">
               <div class="icon text-primary py-3">
                 <i class="fa-solid fa-tablet-screen-button fa-5x"></i>
@@ -151,7 +170,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-10">
+          <!-- 第二張卡片結束 -->
+          <!-- 第三張卡片 -->
+          <div class="col-md-4 col-10 my-2">
             <div class="intro-box">
               <div class="icon text-primary py-3">
                 <i class="fas fa-rocket fa-5x" aria-hidden="true"></i>
@@ -164,19 +185,67 @@
               </div>
             </div>
           </div>
+          <!-- 第三張卡片結束 -->
+        </div>
+
+        <div class="licenseSection">
+          <h3 class="text-center pt-3 license-tilte">證書與證照</h3>
+
+          <ul class="row justify-content-center">
+            <li class="sheet col-md-4 col-sm-6 col-11 my-3 wow bounceInUp">
+              <i class="fa-solid fa-circle-check pl-4"></i>
+              程式語言 (C/Python)
+            </li>
+            <li
+              class="sheet col-md-4 col-sm-6 col-11 my-3 wow bounceInUp"
+              data-wow-delay="0.2s"
+            >
+              <i class="fa-solid fa-circle-check pl-4"></i>
+              台大網頁設計基礎班證書
+            </li>
+            <li
+              class="sheet col-md-4 col-sm-6 col-11 my-3 wow bounceInUp"
+              data-wow-delay="0.4s"
+            >
+              <i class="fa-solid fa-circle-check pl-4"></i>
+              美國精算證照Soa p科
+            </li>
+            <li
+              class="sheet col-md-4 col-sm-6 col-11 my-3 wow bounceInUp"
+              data-wow-delay="0.6s"
+            >
+              <i class="fa-solid fa-circle-check pl-4"></i>
+              證卷商業務員
+            </li>
+            <li
+              class="sheet col-md-4 col-sm-6 col-11 my-3 wow bounceInUp"
+              data-wow-delay="0.8s"
+            >
+              <i class="fa-solid fa-circle-check pl-4"></i>
+              高級證卷商業務員
+            </li>
+            <li
+              class="sheet col-md-4 col-sm-6 col-11 my-3 wow bounceInUp"
+              data-wow-delay="1s"
+            >
+              <i class="fa-solid fa-circle-check pl-4"></i>
+              金融市場常識與職業道德
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section id="SkillSection" class="py-5 text-white">
+    <section id="SkillSection" class="pt-5 text-white">
       <h2 class="section-title mb-5 text-center titleShadow">skill</h2>
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
+        <div class="row justify-content-around">
+          <!-- 左邊按鈕 -->
+          <div class="col-md-5 col-sm-12">
             <h3 class="text-light text-center pt-3">前端</h3>
             <ul>
               <li><a>HTML</a></li>
-              <li><a>CSS/CASS</a></li>
+              <li><a>CSS/SCSS</a></li>
               <li><a>JavaScript</a></li>
               <li><a>React</a></li>
               <li><a>jQuery</a></li>
@@ -194,105 +263,184 @@
             </ul>
           </div>
 
-          <div class="col-md-6 col-sm-10 col-10">
-            <div class="row">
-              <div class="col-sm-10 col-md-10">
-                <h3 class="text-light pt-3">自學課程</h3>
-                <div class="my-4">
-                  <button
-                    data-toggle="collapse"
-                    data-target="#article1"
-                    class="btn btn-primary"
-                  >
-                    Udemy
-                  </button>
-                  <button
-                    data-toggle="collapse"
-                    data-target="#article2"
-                    class="btn btn-primary"
-                  >
-                    Hahow
-                  </button>
-                  <button
-                    data-toggle="collapse"
-                    data-target="#article3"
-                    class="btn btn-primary"
-                  >
-                    台大訓練班
-                  </button>
+          <!-- 右邊選單 -->
+          <div class="col-md-5 col-sm-10 col-10">
+            <h3 class="text-light pt-3 text-center">自學課程</h3>
 
-                  <div>
-                    <article class="my-3 collapse show" id="article1">
-                      <h3>Udmey |</h3>
-                      <p class="lh-30">
-                        離散數學與演算法 (Python, JavaScript)
-                        <br />
-                        2022網頁開發全攻略(HTML, CSS, JavaScript, React, SQL,
-                        Node, more) <br />
-                        Python資料分析-入門實戰
-                      </p>
-                    </article>
-                    <article class="my-3 collapse show lh-30" id="article2">
-                      <h3>Hahow |</h3>
-                      <p>Python 入門特訓 - 基礎實作到證照攻略</p>
-                    </article>
-                    <article class="my-3 collapse show" id="article3">
-                      <h3 class="h3-title-600">台大資訊系統訓練班|</h3>
-                      <p class="lh-30">
-                        HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班
-                      </p>
-                      <h3 class="p-title-600">彭彭的課程 |</h3>
-                      <p class="lh-30">
-                        JavaScript ES6 與 React 前端開發：從入門到進階
-                      </p>
-                    </article>
-                  </div>
-                  <br />
-                  <section class="section-35vh">
-                    <h3 class="text-light py-2">證照與證書</h3>
-                    <nav class="nav nav-pills">
-                      <a
-                        data-toggle="tab"
-                        class="nav-link active"
-                        href="#article4"
-                        >程式語言</a
-                      >
-                      <a data-toggle="tab" class="nav-link" href="#article5"
-                        >財務相關</a
-                      >
-                    </nav>
-
-                    <div class="tab-content">
-                      <article id="article4" class="my-3 tab-pane active lh-30">
-                        <h3>程式語言</h3>
-                        <p>
-                          TQC+ 程式語言 (Python) <br />
-                          台灣大學資訊班-網頁設計基礎班結業證書
-                        </p>
-                      </article>
-                      <article id="article5" class="my-3 tab-pane lh-30">
-                        <h3>財務相關</h3>
-                        <p class="lh-30">
-                          金融市場常識與職業道德 <br />
-                          證券商業務員 <br />證券商高級業務員<br />
-                          美國精算證照SOA (p)
-                        </p>
-                      </article>
-                    </div>
-                  </section>
-                </div>
-              </div>
+            <div class="button-group row justify-content-center">
+              <button
+                data-toggle="collapse"
+                data-target="#article1"
+                class="btn btn-primary mx-1"
+              >
+                Udemy
+              </button>
+              <button
+                data-toggle="collapse"
+                data-target="#article2"
+                class="btn btn-primary mx-1"
+              >
+                Hahow
+              </button>
+              <button
+                data-toggle="collapse"
+                data-target="#article3"
+                class="btn btn-primary mx-1"
+              >
+                台大訓練班
+              </button>
             </div>
+
+            <div>
+              <article class="my-3 collapse show text-center" id="article1">
+                <h3>Udmey |</h3>
+                <p class="lh-30">
+                  離散數學與演算法 (Python, JavaScript)
+                  <br />
+                  2022網頁開發全攻略 <br />
+                  (HTML, CSS, JavaScript, React, SQL, Node, more) <br />
+                  Python資料分析-入門實戰
+                </p>
+              </article>
+              <article
+                class="my-3 collapse show lh-30 text-center"
+                id="article2"
+              >
+                <h3>Hahow |</h3>
+                <p>Python 入門特訓 - 基礎實作到證照攻略</p>
+              </article>
+              <article class="my-3 collapse show text-center" id="article3">
+                <h3 class="h3-title-600">台大資訊系統訓練班|</h3>
+                <p class="lh-30">
+                  HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班
+                </p>
+                <h3 class="p-title-600">彭彭的課程 |</h3>
+                <p class="lh-30">
+                  JavaScript ES6 與 React 前端開發：從入門到進階
+                </p>
+              </article>
+            </div>
+            <br />
           </div>
         </div>
       </div>
     </section>
 
-    <section id="tableSection" class="py-5 px-5">
+    <section class="project">
+      <div class="container-xl">
+        <h3 class="text-light text-center pb-4">相關作品</h3>
+        <!-- 第一行 -->
+        <div class="row project-row">
+          <!-- 右邊部分 -->
+          <div
+            class="col-sm-11 project-picture col-md-6 hidden wow bounceInLeft justify-content-center"
+          >
+            <img
+              src="./img/todoAPI.png"
+              alt="代辦事項照片"
+              class="picture-img"
+            />
+          </div>
+          <!-- 左邊部分 -->
+          <div
+            data-wow-delay="0.5s"
+            class="col-sm-11 project-intro col-md-6 wow bounceInRight"
+          >
+            <h4 class="project-intro-title mb-3">todoListAPI</h4>
+            <div class="project-intro-text">
+              利用axios串接API，讓網頁可以進行註冊、登入，並將你填寫的todo清單儲存置資料庫，以便之後登入可以保存你的資料。
+              <br />
+              <br />
+              (由於此API提供為測試及練習使用，因此數據將在每天23:59分清除。)
+            </div>
+            <div class="right-link">
+              <a
+                class="project-link"
+                href="https://x870421.github.io/todoListAPI/"
+                target="_blank"
+                >點我觀看</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- 第一行結束 -->
+
+        <!-- 第二行;偶數行記得相反 -->
+        <div class="row flex-row-reverse project-row">
+          <!-- 右邊部分 -->
+          <div
+            class="col-sm-11 project-picture col-md-6 hidden wow bounceInRight"
+          >
+            <img src="./img/parity.png" alt="比價網照片" class="picture-img" />
+          </div>
+
+          <!-- 左邊部分 -->
+
+          <div
+            data-wow-delay="0.5s"
+            class="col-sm-11 project-intro col-md-6 wow bounceInLeft"
+          >
+            <h4 class="project-intro-title mb-3">農產品比價網</h4>
+            <div class="project-intro-text">
+              利用axios串接json資料，並將資料印在網頁上。
+              <br />可以透過農產品的總類去篩選，也可以依造價格高低做排序，每15筆資料唯一頁。
+            </div>
+            <div class="left-link">
+              <a
+                class="project-link"
+                href="https://x870421.github.io/parity/"
+                target="_blank"
+                >點我觀看</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- 第二行結束 ;偶數行記得相反-->
+
+        <!-- 第三行 -->
+        <div class="row project-row">
+          <!-- 右邊部分 -->
+          <div
+            class="col-sm-11 project-picture col-md-6 hidden wow bounceInLeft justify-content-center"
+          >
+            <img
+              src="./img/photo-web.png"
+              alt="代辦事項照片"
+              class="picture-img"
+            />
+          </div>
+          <!-- 左邊部分 -->
+          <div
+            data-wow-delay="0.5s"
+            class="col-sm-11 project-intro col-md-6 wow bounceInRight"
+          >
+            <h4 class="project-intro-title mb-3">Photo-website</h4>
+            <div class="project-intro-text">
+              Pexels是一個免費搜尋圖片的網站，利用Pexels提供的專屬API儲存Pexels內容庫。
+              <br />
+              此網頁可由關鍵字搜尋，立即從網頁中取得Pexels的圖片。
+              <br />
+              使用工具：React
+            </div>
+            <div class="right-link">
+              <a
+                class="project-link"
+                href="https://x870421.github.io/photoWebsite/"
+                target="_blank"
+                >點我觀看</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- 第三行結束 -->
+      </div>
+    </section>
+
+    <section id="tableSection" class="py-5 px-md-3 px-sm-1 px-5">
       <h2 class="text-center md-5 mainColor mb-5">
         留下你的資料 <br />讓我來聯繫你!
       </h2>
-      <div class="container">
+      <div class="container-xl">
         <form
           action="https://formspree.io/f/mknyayjb"
           method="post"
@@ -304,9 +452,9 @@
             cols="38"
             rows="12"
             placeholder="想對我說的話"
-            class="col-md-5 col-sm-10"
+            class="col-md-5 col-sm-11"
           ></textarea>
-          <div class="col-md-6 mainColor col-sm-10 my-2 form">
+          <div class="col-md-6 mainColor col-sm-11 my-2 form">
             <label for="name">姓名</label>
             <br />
             <input
@@ -335,7 +483,7 @@
               name="mail"
             />
             <br />
-            <input type="submit" value="送出" />
+            <div class="submit_btn"><input type="submit" value="送出" /></div>
           </div>
         </form>
       </div>
@@ -343,7 +491,7 @@
 
     <footer id="footer" class="footer-end bg-dark text-white">
       <div class="py-2 text-center">
-        &copy; Copy right <span id="yearShow"> </span>
+        蘇奕庭 Susu&copy; Copy right <span id="yearShow"> </span>
       </div>
     </footer>
 
@@ -383,11 +531,4 @@
       <i class="fas fa-chevron-up"></i>
     </button>
   </body>
-
-  <!-- jquery.min.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-  <!-- 連結網頁主程式 -->
-
-  <script src="./js/main.js"></script>
 </html>

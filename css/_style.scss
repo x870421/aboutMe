@@ -9,6 +9,7 @@ $second-color: #f7c331;
   padding: 0;
   margin: 0;
   font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 1px;
 }
 
 html {
@@ -28,16 +29,11 @@ button:focus {
 .titleShadow {
   text-shadow: 0em 0.1em 0.2em black;
 }
-.row {
-  justify-content: center;
-}
 
 .mainColor {
   color: $main-color;
 }
-.section-35vh {
-  height: 35vh;
-}
+
 /*=============================================
   =                  Navbar                     =
   =============================================*/
@@ -110,26 +106,18 @@ button:focus {
 .about {
   background-color: $main-color;
 }
-.color-w,
-.p-white {
-  color: white;
-}
+
 .p-white {
   margin: 1rem;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 1.25rem;
+  color: white;
 }
 .myPic {
   align-items: center;
   max-height: 35vh;
   max-width: 35vh;
   padding: auto;
-}
-.img-flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 2rem;
 }
 
 .about-content {
@@ -158,7 +146,9 @@ button:focus {
 /*=============================================
   =                  Intro                      =
   =============================================*/
-
+#introSection {
+  background-color: #eff;
+}
 .intro-box,
 .intro-line,
 .intro-box .icon {
@@ -199,6 +189,18 @@ button:focus {
   transform: scale(1);
 }
 
+.license-tilte {
+  color: $main-color;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.sheet {
+  list-style-type: none;
+  font-size: 1.25rem;
+  color: $main-color;
+}
+
 /*=============================================
   =                  Features                   =
   =============================================*/
@@ -214,7 +216,7 @@ button:focus {
   background-color: $main-color;
   ul {
     list-style: none;
-    margin: 30px;
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -286,6 +288,105 @@ a.nav-link:hover {
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 1);
 }
+.button-group {
+  margin-top: 30px;
+}
+
+/*=============================================
+  =                project                     =
+  =============================================*/
+
+.project {
+  background-color: $main-color;
+  padding-bottom: 5rem;
+}
+.project-row {
+  justify-content: center;
+}
+
+.hidden {
+  overflow: hidden;
+}
+.project-picture,
+.project-intro {
+  margin: 2rem 0;
+}
+
+.picture-img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-intro-title {
+  color: #fff;
+  font-weight: bold;
+}
+.project-intro-text {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5rem;
+}
+
+.project-link {
+  display: inline-block;
+  position: relative;
+  color: white;
+  padding: 8px 32px;
+  font-weight: 500;
+  margin-top: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    border-top: 2px solid #eee;
+    border-left: 2px solid #eee;
+    transition: 0.25s ease-in;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    transition: 0.25s ease-in;
+  }
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.right-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.left-link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+}
 /*=============================================
   =                  Start Now                  =
   =============================================*/
@@ -336,14 +437,20 @@ footer ul {
   position: relative;
   border: 1px solid #242f41;
   border-radius: 3px;
-  &:last-of-type {
-    cursor: pointer;
-    position: absolute;
-    right: 0px;
-    background-color: $main-color;
-    border: none;
-    color: #fff;
-    width: 70px;
+}
+.submit_btn input {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  background-color: $main-color;
+  border: none;
+  color: #fff;
+  width: 70px;
+  margin: 5px 0 10px 0;
+  padding: 5px;
+  @media (max-width: 768px) {
+    position: relative;
+    right: 0;
   }
 }
 
