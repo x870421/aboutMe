@@ -127,6 +127,8 @@ const App = Vue.createApp({
           ],
         },
       ],
+      scrollSpy: {},
+      navActive: '',
     };
   },
   methods: {
@@ -150,13 +152,29 @@ const App = Vue.createApp({
     },
     onScroll() {
       this.scrollY = window.scrollY;
+      let temp = '';
+      for (let i in this.scrollSpy) {
+        if (this.scrollY > this.scrollSpy[i]) {
+          temp = i;
+        }
+      }
+      this.navActive = temp;
+    },
+    conuntY() {
+      this.navs.forEach((i) => {
+        const href = i.navHref.slice(1);
+        this.scrollSpy[href] = this.$refs[href].offsetTop - 50;
+      });
     },
   },
   unmounted() {
     window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.conuntY);
   },
   mounted() {
     window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('resize', this.conuntY);
+    this.conuntY();
   },
   created() {
     this.innerWidth = window.innerWidth;

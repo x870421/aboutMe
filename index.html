@@ -39,7 +39,9 @@
     <script src="./js/wow.min.js"></script>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="55">
+  <body>
+    <!-- <body data-spy="scroll" data-target=".navbar" data-offset="55"> -->
+
     <div id="app">
       <header>
         <nav
@@ -60,11 +62,15 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav ml-auto">
               <li v-for="(nav, index) in navs" :key="index" class="nav-item">
-                <a class="nav-link" @click="hrefAction" :href="nav.navHref">
+                <a
+                  class="nav-link"
+                  :class="{'active':navActive===nav.navHref.slice(1)}"
+                  @click="hrefAction"
+                  :href="nav.navHref"
+                >
                   {{nav.navName}}
                 </a>
               </li>
@@ -84,7 +90,11 @@
         </section>
       </header>
 
-      <section id="aboutSection" class="about py-5 text-white">
+      <section
+        ref="aboutSection"
+        id="aboutSection"
+        class="about py-5 text-white"
+      >
         <div class="container">
           <h2 class="text-center titleShadow">About</h2>
           <div class="row py-5">
@@ -134,7 +144,7 @@
         </div>
       </section>
 
-      <section id="introSection" class="py-5">
+      <section ref="introSection" id="introSection" class="py-5">
         <div class="container-xl">
           <h2 class="text-center md-5 mainColor mb-5 titleShadow">Intro</h2>
           <!-- 中間區塊 -->
@@ -210,7 +220,7 @@
         </div>
       </section>
 
-      <section id="SkillSection" class="pt-5 text-white">
+      <section ref="SkillSection" id="SkillSection" class="pt-5 text-white">
         <h2 class="section-title mb-5 text-center titleShadow">skill</h2>
         <div class="container">
           <div class="row justify-content-around">
@@ -320,7 +330,11 @@
         </div>
       </section>
 
-      <section id="tableSection" class="py-5 px-md-3 px-sm-1 px-5">
+      <section
+        ref="tableSection"
+        id="tableSection"
+        class="py-5 px-md-3 px-sm-1 px-5"
+      >
         <h2 class="text-center md-5 mainColor mb-5">
           留下你的資料 <br />讓我來聯繫你!
         </h2>
