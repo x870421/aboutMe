@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon shortcut"
+      href="https://raw.githubusercontent.com/x870421/parity/main/icons8-cat-pot-16.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>大家好我是蘇奕庭!</title>
+    <!-- vue -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.global.min.js"></script>
+    <!-- jquery.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- bootstrap.min.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <!-- wow.min.js -->
+    <script src="./js/wow.min.js"></script>
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="55">
+    <div id="app">
+      <header>
+        <nav
+          id="navtop"
+          class="navbar navbar-expand-sm navbar-dark fixed-top"
+          :class="{'navtop-bg':scrollY!==0}"
+        >
+          <a class="navbar-brand px-3" href="#">My Website</a>
+
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+              <li v-for="(nav, index) in navs" :key="index" class="nav-item">
+                <a class="nav-link" @click="hrefAction" :href="nav.navHref">
+                  {{nav.navName}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <section
+          id="header"
+          class="jumbotron text-white"
+          :class="{'header-img':scrollY!==0}"
+        >
+          <div class="container">
+            <h1 class="hi1">Hi,I'm Susu！</h1>
+            <p class="hi2">Welcome to my Website.</p>
+          </div>
+        </section>
+      </header>
+
+      <section id="aboutSection" class="about py-5 text-white">
+        <div class="container">
+          <h2 class="text-center titleShadow">About</h2>
+          <div class="row py-5">
+            <!-- 左邊圖片與文字部分 -->
+            <div class="col-md-6 row justify-content-center">
+              <img class="myPic mx-auto" src="./img/me 1.png" alt="me" />
+
+              <ul class="about-content align-item-center fs-12 mx-auto">
+                <li class="my-1 scaleTop">
+                  <i class="fa-solid fa-envelope"></i>：
+                  <a
+                    class="about-content-link"
+                    href="mailto:xxx870421@gmail.com"
+                    >xxx870421@gmail.com</a
+                  >
+                </li>
+                <li class="my-1 scaleTop">
+                  <i class="fa-solid fa-phone"></i>：
+                  <a class="about-content-link" href="tel:+886-920166950"
+                    >0920166950</a
+                  >
+                </li>
+                <li class="my-1 scaleTop">
+                  <i class="fa-brands fa-github"></i>：
+                  <a
+                    class="about-content-link"
+                    href="https://github.com/x870421"
+                    target="_blank"
+                    >github.com/x870421</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- 右邊介紹部分 -->
+            <div class="col-md-6 text-secondary my-auto">
+              <p class="p-white">
+                我畢業於東吳大學財務工程與精算學系，畢業後從事會計的工作，對程式語言很有興趣。
+                <br />
+                <br />
+                在大學期間，有使用R、Python與Spss的經驗，開啟了我對於撰寫程式的興趣。
+                <br />
+                <br />
+                因為我從小就對電腦有濃厚的興趣，加上想要學會更多不同的語言，因此利用業餘時間透過許多不同的線上學習資源充實自己，希望未來可以找到相關的工作。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="introSection" class="py-5">
+        <div class="container-xl">
+          <h2 class="text-center md-5 mainColor mb-5 titleShadow">Intro</h2>
+          <!-- 中間區塊 -->
+          <div class="row justify-content-center">
+            <!-- 第一張卡片 -->
+            <div class="col-md-4 col-10 my-2">
+              <div class="intro-box h-100">
+                <div class="icon text-primary py-3">
+                  <a href="https://github.com/x870421" target="_blank">
+                    <i class="fab fa-brands fa-github fa-5x"></i>
+                  </a>
+                </div>
+                <h3 class="text-secondary">
+                  <strong>GitHub</strong>
+                </h3>
+                <div class="intro-line bg-primary"></div>
+                <div class="px-2 text-left">
+                  點擊我的GitHub，參考我的作品集。
+                  <br />GitHub上皆有設定GitHub Pages，也可以直接觀看網頁成果。
+                </div>
+              </div>
+            </div>
+            <!-- 第一張卡片結束 -->
+            <!-- 第二張卡片 -->
+            <div class="col-md-4 col-10 my-2">
+              <div class="intro-box h-100">
+                <div class="icon text-primary py-3">
+                  <i class="fa-solid fa-tablet-screen-button fa-5x"></i>
+                </div>
+                <h3 class="text-secondary">
+                  <strong>網頁設計</strong>
+                </h3>
+                <div class="intro-line bg-primary"></div>
+                <div class="px-2 text-left">
+                  熟悉RWD設計，使網站在不同裝置下瀏覽，能有更佳的視覺體驗。<br />
+                  主要使用Vue+AntD或Bootstrap進行開發。
+                </div>
+              </div>
+            </div>
+            <!-- 第二張卡片結束 -->
+            <!-- 第三張卡片 -->
+            <div class="col-md-4 col-10 my-2">
+              <div class="intro-box h-100">
+                <div class="icon text-primary py-3">
+                  <i class="fas fa-rocket fa-5x" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-secondary"><strong>網頁互動</strong></h3>
+                <div class="intro-line bg-primary"></div>
+                <div class="px-2 text-left">
+                  使用JavaScript做出互動式網頁，提高瀏覽者使用體驗。<br />
+                  axios串接API技術。
+                </div>
+              </div>
+            </div>
+            <!-- 第三張卡片結束 -->
+          </div>
+
+          <div class="licenseSection">
+            <h3 class="text-center pt-3 license-tilte">證書與證照</h3>
+
+            <ul class="row justify-content-center">
+              <li
+                v-for="(license, index) in licenses"
+                :key="'license'+index"
+                class="sheet col-md-4 col-sm-6 col-11 my-3 wow bounceInUp"
+                :data-wow-delay="0.2*index+'s'"
+              >
+                <i class="fa-solid fa-circle-check pl-4"></i>
+                {{license}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="SkillSection" class="pt-5 text-white">
+        <h2 class="section-title mb-5 text-center titleShadow">skill</h2>
+        <div class="container">
+          <div class="row justify-content-around">
+            <!-- 左邊按鈕 -->
+            <div class="col-md-5 col-sm-12">
+              <div v-for="(skill, index) in skills" :key="'skill'+ index">
+                <h3 class="text-light text-center py-2">
+                  {{skill.skillGroup}}
+                </h3>
+                <ul>
+                  <li
+                    v-for="(item, index) in skill.skillList"
+                    :key="'item'+index"
+                  >
+                    <a>{{item}}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 右邊選單 -->
+            <div class="col-md-5 col-sm-10 col-10">
+              <h3 class="text-light pt-3 text-center">自學課程</h3>
+
+              <div class="button-group row justify-content-center">
+                <button
+                  v-for="(course, index) in courses"
+                  :key="'course' + index"
+                  data-toggle="collapse"
+                  :data-target="'#' + course.target"
+                  class="btn btn-primary mx-1"
+                >
+                  {{ course.label }}
+                </button>
+              </div>
+
+              <div>
+                <article
+                  v-for="(course, index) in courses"
+                  :key="'course' + index"
+                  class="my-4 collapse show text-center"
+                  :id="course.target"
+                >
+                  <h3>{{ course.name }} |</h3>
+                  <p class="lh-30">
+                    <template v-for="(row, index) in course.text" :key="index">
+                      <br v-if="index!== 0" />
+                      {{ row }}
+                    </template>
+                  </p>
+                </article>
+              </div>
+              <br />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="container-xl">
+          <h3 class="text-light text-center pb-4">相關作品</h3>
+          <!-- VUE -->
+          <div
+            v-for="(project, index) in projects"
+            :key="'project'+ index"
+            class="row project-row"
+            :class="{'flex-row-reverse RWDupdate':index%2!==0}"
+          >
+            <!-- 右邊部分 -->
+            <div
+              class="col-sm-11 project-picture col-md-6 hidden wow"
+              :class="{'justify-content-center':index%2===0,'bounceInRight':index%2!==0 && innerWidth>=768,
+              'bounceInLeft':innerWidth<768 ||index%2===0 && innerWidth>=768 }"
+            >
+              <img
+                :src="project.imgSrc"
+                :alt="project.imgAlt"
+                class="picture-img"
+              />
+            </div>
+            <!-- 左邊部分 -->
+            <div
+              :data-wow-delay="innerWidth<768 ? '0s' : '0.5s'"
+              class="col-sm-11 project-intro d-flex justify-content-between flex-column col-md-6 wow"
+              :class="{
+              'bounceInRight':innerWidth<768||index%2===0 && innerWidth>=768,
+              'bounceInLeft':index%2!==0&&innerWidth>=768}"
+            >
+              <h4 class="project-intro-title mb-3">{{ project.title }}</h4>
+              <div class="project-intro-text">
+                <template
+                  v-for="(row, index) in project.text"
+                  :key="'row'+index"
+                >
+                  <br v-if="index!==0" />
+                  {{ row }}
+                </template>
+              </div>
+              <div :class="{'right-link':index%2===0,'left-link':index%2!==0}">
+                <a class="project-link" :href="project.href" target="_blank"
+                  >點我觀看</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- VUE -->
+        </div>
+      </section>
+
+      <section id="tableSection" class="py-5 px-md-3 px-sm-1 px-5">
+        <h2 class="text-center md-5 mainColor mb-5">
+          留下你的資料 <br />讓我來聯繫你!
+        </h2>
+        <div class="container-xl">
+          <form
+            action="https://formspree.io/f/mknyayjb"
+            method="post"
+            class="row justify-content-around"
+          >
+            <textarea
+              name="textarea"
+              id="textarea"
+              cols="38"
+              rows="12"
+              placeholder="想對我說的話"
+              class="col-md-5 col-sm-11"
+            ></textarea>
+            <div class="col-md-6 mainColor col-sm-11 my-2 form">
+              <label for="name">姓名</label>
+              <br />
+              <input
+                id="name"
+                type="text"
+                placeholder="請輸入姓名"
+                name="name"
+                required
+              />
+              <br />
+              <label for="phone">電話</label>
+              <br />
+              <input
+                id="phone"
+                type="text"
+                placeholder="請輸入電話"
+                name="phone"
+              />
+              <br />
+              <label for="mail">信箱</label>
+              <br />
+              <input
+                id="mail"
+                type="email"
+                placeholder="請輸入信箱"
+                name="mail"
+              />
+              <br />
+              <div class="submit_btn"><input type="submit" value="送出" /></div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer id="footer" class="footer-end bg-dark text-white">
+        <div class="py-2 text-center">
+          蘇奕庭 Susu&copy; Copy right <span id="yearShow"> {{ year }} </span>
+        </div>
+      </footer>
+
+      <div ref="sideBox" class="side-box">
+        <div class="left-part">
+          <button @click="sideBoxAction('toggle')" class="ad-toggle-btn">
+            <i class="fas fa-sort"></i>
+          </button>
+        </div>
+        <div class="right-part">
+          <img
+            class="w-100"
+            src="https://github.com/x870421/aboutMe/blob/master/img/1280.jpg?raw=true"
+          />
+          <p>歡迎來到我的網站<br />有任何建議歡迎隨時與我聯繫!</p>
+          <ul>
+            <li class="my-1 right-part-content">
+              信箱：
+              <a class="" href="mailto:xxx870421@gmail.com"
+                >xxx870421@gmail.com</a
+              >
+            </li>
+            <li class="my-1 right-part-content">
+              電話：
+              <a class="" href="tel:+886-920166950">0920166950</a>
+            </li>
+          </ul>
+          <div class="mt-2">
+            <button
+              @click="sideBoxAction('remove')"
+              id="removeSideBoxBtn"
+              class="btn btn-sm btn-danger"
+            >
+              Close Box
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button @click="scrollTop" :class="{'d-none':scrollY<500}" id="goBackBtn">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+  </body>
+  <script src="./js/app.js"></script>
+</html>

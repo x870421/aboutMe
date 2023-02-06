@@ -1,0 +1,55 @@
+body {
+  header {
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1.hi1 {
+          font-family: 'Courier New', Courier, monospace;
+          width: 0ch;
+          overflow: hidden;
+          white-space: nowrap;
+          font-weight: 600;
+          animation: 2s typing steps(13, jump-none) forwards;
+          animation-delay: 0.7s;
+          text-shadow: 0.1em 0.1em 0.2em black;
+        }
+        p.hi2 {
+          font-size: 1.75rem;
+          font-family: 'Courier New', Courier, monospace;
+          font-weight: 500;
+          width: 0ch;
+          overflow: hidden;
+          white-space: nowrap;
+          animation: 2s typing2 steps(22, jump-none) forwards;
+          animation-delay: 0.7s;
+          text-shadow: 0.1em 0.1em 0.2em black;
+        }
+      }
+    }
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 13ch;
+  }
+}
+@keyframes typing2 {
+  from {
+    width: 1ch;
+  }
+  to {
+    width: 22ch;
+  }
+}

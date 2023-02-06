@@ -1,0 +1,12 @@
+@import 'animax';
+@import 'style';
+
+.header-img {
+  transition: all 0.25s;
+  filter: blur(5px);
+}
+
+.navtop-bg {
+  background-color: black !important;
+  border-bottom: none !important;
+}

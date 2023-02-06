@@ -1,0 +1,531 @@
+/*=============================================
+=                  General                    =
+=============================================*/
+$main-color: #30415d;
+$second-color: #f7c331;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 1px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+button:focus {
+  outline: none;
+}
+
+.titleShadow {
+  text-shadow: 0em 0.1em 0.2em black;
+}
+
+.mainColor {
+  color: $main-color;
+}
+
+/*=============================================
+  =                  Navbar                     =
+  =============================================*/
+
+.navbar {
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.11);
+  // height: 55px;
+  padding: 4px 1rem;
+}
+
+#navtop {
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #fff;
+}
+.navbar-brand {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.nav-link :hover,
+.nav-link :active {
+  color: $second-color;
+  text-decoration: none;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: $second-color;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: $second-color;
+}
+
+/*=============================================
+  =                  Header                     =
+  =============================================*/
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.35s ease;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  // padding: 200px 0px;
+  height: 80vh;
+  width: 100%;
+  background-image: url('../img/1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*固定背景*/
+  background-attachment: fixed;
+}
+/*=============================================
+  =                  About                      =
+  =============================================*/
+.about {
+  background-color: $main-color;
+}
+
+.p-white {
+  margin: 1rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1.25rem;
+  color: white;
+}
+.myPic {
+  align-items: center;
+  max-height: 35vh;
+  max-width: 35vh;
+  padding: auto;
+}
+
+.about-content {
+  padding: 2rem;
+  list-style-type: none;
+}
+.about-content-link {
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+    color: $second-color;
+  }
+}
+.fs-12 {
+  font-size: 1.2rem;
+}
+.scaleTop {
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.1);
+    color: $second-color;
+  }
+}
+
+/*=============================================
+  =                  Intro                      =
+  =============================================*/
+#introSection {
+  background-color: #eff;
+}
+.intro-box,
+.intro-line,
+.intro-box .icon {
+  transition: all 0.3s ease;
+}
+
+.intro-box {
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 15px 15px;
+  text-align: center;
+  position: relative;
+  bottom: 0px;
+}
+
+.intro-box:hover {
+  background: white;
+  box-shadow: 0px 22px 22px rgba(0, 0, 0, 0.25);
+  bottom: 7px;
+}
+
+.intro-line {
+  width: 20px;
+  height: 6px;
+  border-radius: 3px;
+  margin: 10px auto;
+}
+
+.intro-box:hover .intro-line {
+  width: 40px;
+}
+
+.intro-box .icon {
+  transform: scale(0.8);
+}
+
+.intro-box:hover .icon {
+  transform: scale(1);
+}
+
+.license-tilte {
+  color: $main-color;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.sheet {
+  list-style-type: none;
+  font-size: 1.25rem;
+  color: $main-color;
+}
+
+/*=============================================
+  =                  Features                   =
+  =============================================*/
+
+/*=============================================
+  =                  Reviews                    =
+  =============================================*/
+
+/*=============================================
+  =                  Skill                      =
+  =============================================*/
+#SkillSection {
+  background-color: $main-color;
+  ul {
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    li {
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 0px;
+      margin: 10px;
+      position: relative;
+      z-index: 5;
+      transition: all 0.5s ease;
+
+      &::before {
+        width: 100%;
+        height: 100%;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        border: 2px solid #eee;
+        border-radius: 6px;
+        pointer-events: none;
+      }
+      &::after {
+        width: 100%;
+        height: 100%;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: -1;
+        border-radius: 6px;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease;
+      }
+      &:hover::before {
+        border: 2px solid $second-color;
+      }
+      &:hover::after {
+        left: 0;
+        top: 0;
+      }
+
+      a {
+        padding: 8px 24px;
+        position: relative;
+        z-index: 3;
+        color: inherit;
+      }
+
+      &:hover {
+        a {
+          color: $second-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+a.nav-link:hover {
+  color: $second-color;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
+}
+.button-group {
+  margin-top: 30px;
+}
+
+/*=============================================
+  =                project                     =
+  =============================================*/
+
+.project {
+  background-color: $main-color;
+  padding-bottom: 5rem;
+}
+.project-row {
+  justify-content: center;
+}
+
+.hidden {
+  overflow: hidden;
+}
+.project-picture,
+.project-intro {
+  margin: 2rem 0;
+}
+
+.picture-img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-intro-title {
+  color: #fff;
+  font-weight: bold;
+}
+.project-intro-text {
+  color: #fff;
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+.project-link {
+  display: inline-block;
+  position: relative;
+  color: white;
+  padding: 8px 32px;
+  font-weight: 500;
+  margin-top: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    border-top: 2px solid #eee;
+    border-left: 2px solid #eee;
+    transition: 0.25s ease-in;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    transition: 0.25s ease-in;
+  }
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.right-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.left-link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+/*=============================================
+  =                  Start Now                  =
+  =============================================*/
+
+/*=============================================
+  =                   Footer                    =
+  =============================================*/
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-end {
+  font-size: 8px;
+}
+
+#goBackBtn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 1000;
+  border-radius: 50%;
+  background-color: #007bff;
+  &:hover {
+    background-color: #0062cc;
+  }
+  i {
+    color: #242f41;
+  }
+}
+/*=============================================
+  =                 FORM                   =
+  =============================================*/
+
+.form label {
+  cursor: pointer;
+}
+.form input {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 10px 0;
+  position: relative;
+  border: 1px solid #242f41;
+  border-radius: 3px;
+}
+.submit_btn input {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  background-color: $main-color;
+  border: none;
+  color: #fff;
+  width: 70px;
+  margin: 5px 0 10px 0;
+  padding: 5px;
+  @media (max-width: 768px) {
+    position: relative;
+    right: 0;
+  }
+}
+
+/*=============================================
+  =                  SIDE-BOX                   =
+  =============================================*/
+
+.side-box {
+  width: 300px;
+  position: fixed;
+  right: -275px;
+  bottom: 80px;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: flex;
+  box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.side-box.active {
+  right: 0px;
+}
+
+.left-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #ddd;
+}
+
+.ad-toggle-btn {
+  width: 25px;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+.ad-toggle-btn > i {
+  transform: rotateZ(90deg);
+}
+
+.ad-toggle-btn:hover {
+  color: #666;
+}
+
+.right-part {
+  padding: 10px;
+}
+
+.right-part > p {
+  margin-bottom: 0;
+}
+
+.right-part-content {
+  list-style-type: none;
+}
+
+.lh-30 {
+  line-height: 30px;
+}
+.h3-title-600 {
+  font-weight: 600px !important;
+}
+h2 {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    background-attachment: scroll;
+  }
+
+  .form {
+    padding: 0;
+  }
+}
