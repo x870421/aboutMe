@@ -211,7 +211,12 @@ const App = Vue.createApp({
             content: '發送成功',
           };
           $('#liveToast').toast('show');
-
+          emailForm = {
+                  textarea: '',
+                  name: '',
+                  phone: '',
+                  email: '',
+                },
           console.log('SUCCESS!', response.status, response.text);
           setTimeout(() => {
             vm.disabled = false;
