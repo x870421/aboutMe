@@ -129,6 +129,17 @@ const App = Vue.createApp({
       ],
       scrollSpy: {},
       navActive: '',
+      emailForm: {
+        textarea: '',
+        name: '',
+        phone: '',
+        email: '',
+      },
+      msg: {
+        style: 'success',
+        title: 'hi',
+        content: 'hi',
+      },
     };
   },
   methods: {
@@ -166,6 +177,49 @@ const App = Vue.createApp({
         this.scrollSpy[href] = this.$refs[href].offsetTop - 50;
       });
     },
+    sendEmail(e) {
+      e.preventDefault();
+      const vm = this;
+
+      if (vm.emailForm.name === '' || vm.emailForm.email === '') {
+        vm.msg = {
+          style: 'danger',
+          title: '發送失敗',
+          content: '請填寫您的姓名與email',
+        };
+        $('#liveToast').toast('show');
+        return;
+      }
+
+      const templateParams = {
+        name: vm.emailForm.name,
+        textarea: vm.emailForm.textarea,
+        phone: vm.emailForm.phone,
+        email: vm.emailForm.email,
+      };
+
+      emailjs.send('service_1gqxi6l', 'template_dnlwiem', templateParams).then(
+        function (response) {
+          vm.msg = {
+            style: 'success',
+            title: 'hi!' + vm.emailForm.name,
+            content: '發送成功',
+          };
+          $('#liveToast').toast('show');
+
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        function (error) {
+          vm.msg = {
+            style: 'danger',
+            title: 'hi!' + vm.emailForm.name,
+            content: '發送失敗!請再試一次',
+          };
+          $('#liveToast').toast('show');
+          console.log('FAILED...', error);
+        }
+      );
+    },
   },
   unmounted() {
     window.removeEventListener('scroll', this.onScroll);
@@ -179,6 +233,7 @@ const App = Vue.createApp({
   created() {
     this.innerWidth = window.innerWidth;
     new WOW().init();
+    emailjs.init('IWEhfhoz5IvQcpbiS');
   },
 });
 App.mount('#app');

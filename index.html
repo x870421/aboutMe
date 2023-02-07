@@ -29,6 +29,12 @@
     <link rel="stylesheet" href="./css/main.css" />
 
     <title>大家好我是蘇奕庭!</title>
+    <!-- email -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+    ></script>
+
     <!-- vue -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.global.min.js"></script>
     <!-- jquery.min.js -->
@@ -339,14 +345,10 @@
           留下你的資料 <br />讓我來聯繫你!
         </h2>
         <div class="container-xl">
-          <form
-            action="https://formspree.io/f/mknyayjb"
-            method="post"
-            class="row justify-content-around"
-          >
+          <form class="row justify-content-around">
             <textarea
               name="textarea"
-              id="textarea"
+              v-model="emailForm.textarea"
               cols="38"
               rows="12"
               placeholder="想對我說的話"
@@ -356,7 +358,7 @@
               <label for="name">姓名</label>
               <br />
               <input
-                id="name"
+                v-model="emailForm.name"
                 type="text"
                 placeholder="請輸入姓名"
                 name="name"
@@ -366,7 +368,7 @@
               <label for="phone">電話</label>
               <br />
               <input
-                id="phone"
+                v-model="emailForm.phone"
                 type="text"
                 placeholder="請輸入電話"
                 name="phone"
@@ -375,13 +377,15 @@
               <label for="mail">信箱</label>
               <br />
               <input
-                id="mail"
+                v-model="emailForm.email"
                 type="email"
                 placeholder="請輸入信箱"
                 name="mail"
               />
               <br />
-              <div class="submit_btn"><input type="submit" value="送出" /></div>
+              <div class="submit_btn">
+                <input @click="sendEmail" type="submit" value="送出" />
+              </div>
             </div>
           </form>
         </div>
@@ -426,6 +430,44 @@
               Close Box
             </button>
           </div>
+        </div>
+      </div>
+      <div
+        class="position-fixed p-3"
+        style="
+          width: 300px;
+          z-index: 5;
+          top: 55px;
+          right: 0;
+          left: 0;
+          margin: auto;
+        "
+      >
+        <div
+          id="liveToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          data-delay="2000"
+        >
+          <div class="toast-header">
+            <span
+              :class="`bg-${msg.style}`"
+              class="p-2 rounded me-2 d-inline-block"
+            ></span>
+            <strong class="mr-auto ml-2">{{ msg.title }}</strong>
+            <small>now</small>
+            <button
+              type="button"
+              class="ml-2 mb-1 close"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">{{ msg.content }}</div>
         </div>
       </div>
 
