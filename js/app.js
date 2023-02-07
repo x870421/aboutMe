@@ -140,6 +140,7 @@ const App = Vue.createApp({
         title: 'hi',
         content: 'hi',
       },
+      disabled: false,
     };
   },
   methods: {
@@ -180,7 +181,7 @@ const App = Vue.createApp({
     sendEmail(e) {
       e.preventDefault();
       const vm = this;
-
+      vm.disabled = true;
       if (vm.emailForm.name === '' || vm.emailForm.email === '') {
         vm.msg = {
           style: 'danger',
@@ -188,6 +189,10 @@ const App = Vue.createApp({
           content: '請填寫您的姓名與email',
         };
         $('#liveToast').toast('show');
+        setTimeout(() => {
+          vm.disabled = false;
+          console.log('解除');
+        });
         return;
       }
 
@@ -208,6 +213,10 @@ const App = Vue.createApp({
           $('#liveToast').toast('show');
 
           console.log('SUCCESS!', response.status, response.text);
+          setTimeout(() => {
+            vm.disabled = false;
+            console.log('解除');
+          });
         },
         function (error) {
           vm.msg = {
@@ -217,6 +226,10 @@ const App = Vue.createApp({
           };
           $('#liveToast').toast('show');
           console.log('FAILED...', error);
+          setTimeout(() => {
+            vm.disabled = false;
+            console.log('解除');
+          });
         }
       );
     },

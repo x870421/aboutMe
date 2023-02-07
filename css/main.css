@@ -580,11 +580,11 @@ footer ul {
   border-radius: 3px;
 }
 
-.submit_btn input {
+.submit_btn {
   cursor: pointer;
   position: absolute;
   right: 15px;
-  background-color: #30415d;
+  background-color: #30415d !important;
   border: none;
   color: #fff;
   width: 70px;
@@ -593,7 +593,7 @@ footer ul {
 }
 
 @media (max-width: 768px) {
-  .submit_btn input {
+  .submit_btn {
     position: relative;
     right: 0;
   }

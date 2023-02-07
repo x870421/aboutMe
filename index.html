@@ -383,8 +383,14 @@
                 name="mail"
               />
               <br />
-              <div class="submit_btn">
-                <input @click="sendEmail" type="submit" value="送出" />
+              <div>
+                <button
+                  class="submit_btn"
+                  :disabled="disabled"
+                  @click="sendEmail"
+                >
+                  送出
+                </button>
               </div>
             </div>
           </form>
@@ -423,6 +429,7 @@
           </ul>
           <div class="mt-2">
             <button
+              type="button"
               @click="sideBoxAction('remove')"
               id="removeSideBoxBtn"
               class="btn btn-sm btn-danger"

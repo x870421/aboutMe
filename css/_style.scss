@@ -430,11 +430,11 @@ footer ul {
   border: 1px solid #242f41;
   border-radius: 3px;
 }
-.submit_btn input {
+.submit_btn {
   cursor: pointer;
   position: absolute;
   right: 15px;
-  background-color: $main-color;
+  background-color: $main-color !important;
   border: none;
   color: #fff;
   width: 70px;
